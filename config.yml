@@ -1,0 +1,33 @@
+requirements:
+  - name: unar
+    description: a tool for extracting the contents of rar archive files
+    path: unar
+    versionArgs: -v
+    satisfies: '>=1.10.0'
+  - name: unzip
+    description: a tool for extracting the contents of zip archive files
+    path: unzip
+  - name: pdfimages
+    description: a tool for extracting images in a pdf document
+    path: pdfimages
+    versionArgs: -v
+  - name: mogrify (ImageMagick)
+    description: a tool for converting images format
+    path: mogrify
+    versionArgs: -version | head -n 1
+    satisfies: '>=6.9.11'
+  - name: curl
+    description: a tool for extracting the contents of archive files
+    path: curl
+    versionArgs: --version
+    satisfies: '>=7.74.0'
+  - name: rm
+    description: a tool for extracting the contents of archive files
+    path: rm
+    versionArgs: --version
+    satisfies: '>=8.32.0'
+  - name: chmod
+    description: a tool for extracting the contents of archive files
+    path: chmod
+    versionArgs: --version
+    satisfies: '>=8.32.0'

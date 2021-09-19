@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "src/": "./src/",
+    "std/": "https://deno.land/std@0.106.0/",
+    "oak": "https://deno.land/x/oak/mod.ts",
+    "semver": "https://deno.land/x/semver@v1.4.0/mod.ts"
+  }
+}
