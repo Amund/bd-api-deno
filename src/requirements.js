@@ -44,7 +44,7 @@ async function check(name, path, versionArgs = "", satisfies = null) {
 }
 
 async function checkAll(collection, log = true) { // 🗸 ✘
-  const output = [];
+  let output = true;
   if (!Array.isArray(collection)) {
     throw new Error("collection must be an array");
   }
@@ -54,8 +54,10 @@ async function checkAll(collection, log = true) { // 🗸 ✘
   for (const { name, path, versionArgs, satisfies } of collection) {
     const result = await check(name, path, versionArgs, satisfies || null);
     const { valid, message } = result;
-    output.push(result);
     if (log) console.log(valid ? green(message) : red(message));
+    if (!valid) {
+      output = false;
+    }
   }
   return output;
 }

@@ -148,11 +148,11 @@ Deno.test({
 Deno.test("checkAll: check an empty collection of checks", async () => {
   const inputs = [];
   const output = await requirements.checkAll(inputs);
-  assertEquals(output, []);
+  assertEquals(output, true);
 });
 
 Deno.test("checkAll: check a collection of checks", async () => {
   const check = { name: "test", cmd: "unknown" };
   const output = await requirements.checkAll([check, check], false);
-  assertEquals(output.length, 2);
+  assertEquals(output, false);
 });
