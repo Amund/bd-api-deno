@@ -2,9 +2,11 @@
 COMMON_ARGS = --import-map=import-map.json --allow-run --allow-net --allow-read=./config.yml --allow-write=./var/
 
 run:
+	@clear
 	@deno run ${COMMON_ARGS} src/server.js
 
 run-watch:
+	@clear
 	@deno run ${COMMON_ARGS} --watch src/server.js
 
 test:
